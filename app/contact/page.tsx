@@ -250,32 +250,44 @@ const response = await fetch("https://web-production-91a45.up.railway.app/api/se
                       />
                     </div>
 
-                    {/* Phone Number */}
                     <div>
-                      <Label htmlFor="phoneNumber" className="text-sm font-medium text-gray-700 mb-2 block">
-                        Phone Number
-                      </Label>
-                      <div className="flex gap-2">
-                        <Input
-                          id="countryCode"
-                          type="text"
-                          value={formData.countryCode}
-                          onChange={(e) => handleInputChange("countryCode", e.target.value)}
-                          className="w-20 border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]"
-                          placeholder="+1"
-                          disabled={status === "sending"}
-                        />
-                        <Input
-                          id="phoneNumber"
-                          type="tel"
-                          value={formData.phoneNumber}
-                          onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
-                          className="flex-1 border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]"
-                          placeholder="Enter phone number"
-                          disabled={status === "sending"}
-                        />
-                      </div>
-                    </div>
+  <Label htmlFor="phoneNumber" className="text-sm font-medium text-gray-700 mb-2 block">
+    Phone Number
+  </Label>
+  <div className="flex gap-2">
+    <Input
+      id="countryCode"
+      type="text"
+      value={formData.countryCode}
+      onChange={(e) => {
+        const value = e.target.value;
+        if (value === '' || /^\+[0-9]{1,4}$/.test(value)) {
+          handleInputChange("countryCode", value);
+        }
+      }}
+      className="w-20 border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]"
+      placeholder="+1"
+      disabled={status === "sending"}
+    />
+    <Input
+      id="phoneNumber"
+      type="tel"
+      value={formData.phoneNumber}
+      onChange={(e) => {
+        const value = e.target.value.replace(/\D/g, '');
+        if (value === '' || value.length <= 15) { // Max 15 digits
+          handleInputChange("phoneNumber", value);
+        }
+      }}
+      className="flex-1 border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]"
+      placeholder="Enter phone number"
+      disabled={status === "sending"}
+    />
+  </div>
+  {formData.phoneNumber && formData.phoneNumber.length < 5 && (
+    <p className="text-sm text-red-500 mt-1">Phone number too short (min 5 digits)</p>
+  )}
+</div>
 
                     {/* Company Name */}
                     <div>
