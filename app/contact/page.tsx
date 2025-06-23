@@ -37,6 +37,14 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate phone number
+    if (!formData.phoneNumber || formData.phoneNumber.length < 5) {
+      setStatus("error")
+      setStatusMessage("Please enter a valid phone number (minimum 5 digits)")
+      return
+    }
+
     setStatus("sending")
     setStatusMessage("Sending...")
 
@@ -44,9 +52,7 @@ export default function ContactPage() {
       // Prepare data for submission - combine country code and phone number
       const submissionData = {
         ...formData,
-        phoneNumber: formData.phoneNumber 
-          ? `+${formData.countryCode.replace(/\D/g, '')}${formData.phoneNumber.replace(/\D/g, '')}`
-          : "",
+        phoneNumber: `+${formData.countryCode.replace(/\D/g, '')}${formData.phoneNumber.replace(/\D/g, '')}`
       }
 
       // Send to Django backend API endpoint
@@ -241,7 +247,7 @@ export default function ContactPage() {
                     {/* Phone Number */}
                     <div>
                       <Label htmlFor="phoneNumber" className="text-sm font-medium text-gray-700 mb-2 block">
-                        Phone Number
+                        Phone Number *
                       </Label>
                       <div className="flex gap-2 items-center">
                         <div className="relative flex items-center">
@@ -249,6 +255,7 @@ export default function ContactPage() {
                           <Input
                             id="countryCode"
                             type="text"
+                            required
                             value={formData.countryCode.replace('+', '')} // Remove + for display
                             onChange={(e) => {
                               // Only allow digits, max 4 characters
@@ -263,6 +270,7 @@ export default function ContactPage() {
                         <Input
                           id="phoneNumber"
                           type="tel"
+                          required
                           value={formData.phoneNumber}
                           onChange={(e) => {
                             const value = e.target.value.replace(/\D/g, '');
@@ -321,6 +329,7 @@ export default function ContactPage() {
                         value={formData.serviceType}
                         onValueChange={(value) => handleInputChange("serviceType", value)}
                         disabled={status === "sending"}
+                        required
                       >
                         <SelectTrigger className="border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]">
                           <SelectValue placeholder="Select a service" />
@@ -358,6 +367,7 @@ export default function ContactPage() {
                         value={formData.budget}
                         onValueChange={(value) => handleInputChange("budget", value)}
                         disabled={status === "sending"}
+                        required
                       >
                         <SelectTrigger className="border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]">
                           <SelectValue placeholder="Select your budget range" />
