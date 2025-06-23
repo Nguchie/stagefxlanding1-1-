@@ -148,7 +148,7 @@ export default function BlogPostsThatRankPage() {
 
                 <div className="mb-8">
                   <Image
-                    src="/images/blog/blog-posts-that-rank/types of search intent.jpeg"
+                    src="/images/blog/blog-posts-that-rank/searchintent.jpeg"
                     alt="Diagram showing the four types of search intent: informational, navigational, commercial, and transactional"
                     width={700}
                     height={400}

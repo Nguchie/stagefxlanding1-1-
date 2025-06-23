@@ -47,7 +47,7 @@ export default function Home() {
       quote:
         "StageFX doubled our traffic in just six months. Their SEO strategy was exactly what we needed to grow our online presence.",
       author: "Jamie R.",
-      role: "Creative Director",
+      role: "Army Veteran",
       image: "/images/testimonials/whiteh.PNG",
       imageAlt: "Jamie R., Creative Director at a design agency, professional headshot",
     },
