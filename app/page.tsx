@@ -128,7 +128,7 @@ export default function Home() {
             <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div className="space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-[#9baed9]">7+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-[#9baed9]">9+</div>
                   <p className="text-gray-600 text-sm">Years in Business</p>
                 </div>
                
@@ -141,7 +141,7 @@ export default function Home() {
                   <p className="text-gray-600 text-sm">Websites Launched</p>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-[#9baed9]">15K</div>
+                  <div className="text-3xl md:text-4xl font-bold text-[#9baed9]">15K+</div>
                   <p className="text-gray-600 text-sm">Top 10 Keyword Rankings Achieved</p>
                 </div>
               </div>

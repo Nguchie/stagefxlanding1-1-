@@ -140,7 +140,7 @@ const response = await fetch("https://web-production-91a45.up.railway.app/api/se
                   <div className="w-16 h-16 bg-[#9baed9]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Award className="w-8 h-8 text-[#9baed9]" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">7+</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">9+</h3>
                   <p className="text-gray-600">Years Experience</p>
                 </div>
               </div>
