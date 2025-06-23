@@ -194,7 +194,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-20 bg-[#f8faff]">
+       <section id="about" className="py-20 bg-[#f8faff]">
   <div className="container mx-auto px-4">
     <div className="max-w-6xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#9baed9]">
@@ -202,14 +202,16 @@ export default function Home() {
       </h2>
 
       <div className="flex flex-col md:flex-row items-stretch gap-8">
-        {/* Image on left */}
-        <div className="w-full md:w-1/2">
-          <div className="relative w-full h-full min-h-[450px]">
+        {/* Image on left - modified to remove all extra space */}
+        <div className="w-full md:w-1/2 overflow-hidden">
+          <div className="relative aspect-video w-full h-full">
             <Image
               src="/images/about/about.jpeg"
               alt="StageFX team working in modern office environment"
               fill
-              className="object-contain rounded-lg shadow-lg"
+              className="object-cover rounded-lg shadow-lg w-full h-full"
+              priority
+              style={{ objectPosition: 'center' }}
             />
           </div>
         </div>
@@ -220,7 +222,7 @@ export default function Home() {
             Driving Digital Success Since 2015
           </h3>
           <p className="text-lg text-gray-700 mb-4">
-          StageFX is a premier digital agency in Boston Massachusetts specializing in strategic SEO solutions and high-performance web development. 
+            StageFX is a premier digital agency in Boston Massachusetts specializing in strategic SEO solutions and high-performance web development. 
             We combine technical expertise with creative vision to deliver measurable results for our clients.
           </p>
           <p className="text-lg text-gray-700 mb-4">
