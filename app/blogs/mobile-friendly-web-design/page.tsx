@@ -73,14 +73,14 @@ export default function MobileFriendlyWebDesignPage() {
               </div>
 
               {/* Featured Image */}
-              <div className="mb-12">
-              <img
-  src="/images/blog/mobile-friendly-web-design/blogres.jpeg"
-  alt="Mobile-friendly web design examples showing the same website on desktop, tablet, and smartphone devices"
-  className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
-/>
+              <div className="mb-12 aspect-video">
+  <img
+    src="/images/blog/mobile-friendly-web-design/blogres.jpeg"
+    alt="Mobile-friendly web design examples showing the same website on desktop, tablet, and smartphone devices"
+    className="w-full h-full object-cover rounded-2xl shadow-lg"
+  />
+</div>
 
-              </div>
             </div>
           </div>
         </section>
