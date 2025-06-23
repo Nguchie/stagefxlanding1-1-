@@ -301,55 +301,7 @@ export default function LocalBusinessRankBlogPost() {
           </div>
         </section>
 
-        {/* Related Articles */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center text-[#9baed9]">Related Articles</h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                <Link href="/blogs/local-seo-for-trades" className="group">
-                  <div className="bg-[#f8faff] p-6 rounded-lg hover:shadow-lg transition-shadow">
-                    <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">
-                      SEO
-                    </span>
-                    <h3 className="text-lg font-semibold mt-4 mb-2 text-[#9baed9] group-hover:text-[#8a9dc8]">
-                      Local SEO for Trades: How Plumbers, Electricians & Builders Can Dominate
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Specialized strategies for trade businesses to rank higher and get more jobs.
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/blogs/google-business-profile-optimization" className="group">
-                  <div className="bg-[#f8faff] p-6 rounded-lg hover:shadow-lg transition-shadow">
-                    <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">
-                      SEO
-                    </span>
-                    <h3 className="text-lg font-semibold mt-4 mb-2 text-[#9baed9] group-hover:text-[#8a9dc8]">
-                      The Complete Google Business Profile Optimization Guide (2024)
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Step-by-step guide to maximizing your GBP listing for better rankings.
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/blogs/get-more-google-reviews" className="group">
-                  <div className="bg-[#f8faff] p-6 rounded-lg hover:shadow-lg transition-shadow">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold">
-                      Marketing
-                    </span>
-                    <h3 className="text-lg font-semibold mt-4 mb-2 text-[#9baed9] group-hover:text-[#8a9dc8]">
-                      How to Get More Google Reviews Without Annoying Customers
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Ethical, effective strategies to increase your review count and quality.
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+  
       </main>
 
       {/* Floating Back Button */}

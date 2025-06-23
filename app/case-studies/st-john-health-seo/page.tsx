@@ -356,7 +356,7 @@ export default function StJohnHealthSEOCaseStudy() {
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-md text-center">
                     <ExpandableImage
-                      src="/images/case-studies/st-john-health-seo/pham.png"
+                      src="/images/case-studies/st-john-health-seo/pham.PNG"
                       alt="Keyword ranking screenshot for dental services western australia"
                       width={150}
                       height={320}

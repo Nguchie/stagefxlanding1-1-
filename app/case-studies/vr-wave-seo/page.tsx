@@ -91,7 +91,7 @@ export default function VRWaveSEOCaseStudy() {
                 </p>
                 <div className="mb-8">
                   <Image
-                    src="/images/case-studies/vr-wave-website-design.png"
+                    src="/images/case-studies/vr-wave-website-design.PNG"
                     alt="VR Wave prescription lens inserts for virtual reality headsets"
                     width={700}
                     height={400}

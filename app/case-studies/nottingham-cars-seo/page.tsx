@@ -107,7 +107,7 @@ export default function NottinghamCarsSEOCaseStudy() {
                 </p>
                 <div className="mb-8">
                   <Image
-                    src="/images/case-studies/nottingham-cars-seo/not-landing.png"
+                    src="/images/case-studies/nottingham-cars-seo/not-landing.PNG"
                     alt="VR Wave prescription lens inserts for virtual reality headsets"
                     width={700}
                     height={400}

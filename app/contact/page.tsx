@@ -177,22 +177,7 @@ const response = await fetch("https://web-production-91a45.up.railway.app/api/se
                         </div>
                       </CardContent>
                     </Card>
-
-                    <Card className="border-l-4 border-l-[#9baed9] shadow-lg hover:shadow-xl transition-shadow">
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 bg-[#9baed9]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Mail className="w-6 h-6 text-[#9baed9]" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                            <p className="text-gray-700 mb-1">samuel@stagefx.us</p>
-                            <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
+                    
                     <Card className="border-l-4 border-l-[#9baed9] shadow-lg hover:shadow-xl transition-shadow">
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">

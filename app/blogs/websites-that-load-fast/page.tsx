@@ -75,7 +75,7 @@ export default function WebsitesThatLoadFastPage() {
               {/* Featured Image */}
               <div className="mb-12">
               <img
-  src="/images/blog/websites-that-load-fast/website-speed-optimization-dashboard.png"
+  src="/images/blog/websites-that-load-fast/website-speed-optimization-dashboard.PNG"
   alt="Website speed optimization dashboard showing performance metrics and load time improvements"
   className="w-full h-64 md:h-96 object-cover object-top rounded-2xl shadow-lg"
 />

@@ -48,7 +48,7 @@ export default function Home() {
         "StageFX doubled our traffic in just six months. Their SEO strategy was exactly what we needed to grow our online presence.",
       author: "Jamie R.",
       role: "Creative Director",
-      image: "/images/testimonials/whiteh.png",
+      image: "/images/testimonials/whiteh.PNG",
       imageAlt: "Jamie R., Creative Director at a design agency, professional headshot",
     },
     {
@@ -56,7 +56,7 @@ export default function Home() {
         "We started ranking on page one within four months. The keyword research was thorough and the implementation was flawless.",
       author: "Kamal P.",
       role: "Marketing Lead",
-      image: "/images/testimonials/indian.png",
+      image: "/images/testimonials/indian.PNG",
       imageAlt: "Kamal P., Marketing Lead at a tech company, professional portrait",
     },
     {
@@ -64,7 +64,7 @@ export default function Home() {
         "Our site is now faster, cleaner, and converting better. The development team delivered exactly what we needed on time and on budget.",
       author: "Lisa H.",
       role: "Small Business Owner",
-      image: "/images/testimonials/blackw.png",
+      image: "/images/testimonials/blackw.PNG",
       imageAlt: "Lisa H., Small Business Owner of a retail store, smiling profile photo",
     },
   ]
@@ -186,7 +186,7 @@ export default function Home() {
                     href="/web-development"
                     className="inline-flex items-center bg-white text-black hover:bg-gray-100 border border-gray-200 shadow-sm px-6 py-2 rounded-lg transition-colors"
                   >
-                    View p                           ortfolio <ArrowRight className="ml-2 h-4 w-4" />
+                    View portfolio <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
               </div>

@@ -61,7 +61,7 @@ export default function VRWaveWebDevCaseStudy() {
               <div className="flex items-center gap-4 mb-6">
                 <h1 className="text-4xl md:text-5xl font-bold text-[#9baed9]">VR Wave</h1>
                 <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">eCommerce</span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Web Dev</span>
+                <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Web Dev0</span>
               </div>
               <p className="text-xl text-gray-600 mb-8">
                 Building a high-performance eCommerce site with advanced product configuration and prescription input for VR lens inserts.
@@ -370,7 +370,7 @@ export default function VRWaveWebDevCaseStudy() {
         <div className="flex flex-col items-center">
           <div className="w-full max-w-[300px] aspect-[3/2] relative bg-white">
             <Image
-              src="/images/case-studies/vr-wave-web-dev/product-configuration-interface.png"
+              src="/images/case-studies/vr-wave-web-dev/product-configuration-interface.PNG"
               alt="VR Wave Product Configuration Interface showing lens customization options"
               fill
               className="rounded-lg shadow-lg object-contain"
@@ -400,7 +400,7 @@ export default function VRWaveWebDevCaseStudy() {
         <div className="flex flex-col items-center">
           <div className="w-full max-w-[300px] aspect-[3/2] relative bg-white">
             <Image
-              src="/images/case-studies/vr-wave-web-dev/3d-product-preview.png"
+              src="/images/case-studies/vr-wave-web-dev/3d-product-preview.PNG"
               alt="VR Wave 3D Product Preview showing interactive lens visualization"
               fill
               className="rounded-lg shadow-lg object-contain"

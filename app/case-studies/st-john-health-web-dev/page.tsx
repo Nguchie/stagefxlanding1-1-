@@ -406,7 +406,7 @@ export default function StJohnHealthWebDevCaseStudy() {
         <div className="flex flex-col items-center">
           <div className="w-full max-w-[300px] aspect-[3/2] relative bg-white">
             <Image
-              src="/images/case-studies/st-john-health-web-dev/appointment-scheduling-interface.png"
+              src="/images/case-studies/st-john-health-web-dev/appointment-scheduling-interface.PNG"
               alt="Appointment Scheduling"
               fill
               className="rounded-lg shadow-lg object-contain"
@@ -432,7 +432,7 @@ export default function StJohnHealthWebDevCaseStudy() {
         <div className="flex flex-col items-center">
           <div className="w-full max-w-[300px] aspect-[3/2] relative bg-white">
             <Image
-              src="/images/case-studies/st-john-health-web-dev/mobile-responsive-design.png"
+              src="/images/case-studies/st-john-health-web-dev/mobile-responsive-design.PNG"
               alt="Responsive Design"
               fill
               className="rounded-lg shadow-lg object-contain"

@@ -49,7 +49,7 @@ const caseStudies = [
     type: "Web Development",
     summary:
       "From scratch to premium VR eCommerce site — our dev team built performance into every pixel with advanced functionalities.",
-    image: "/images/case-studies/vr-wave-website-design.png",
+    image: "/images/case-studies/vr-wave-website-design.PNG",
     badge: "Web Dev",
   },
   {
@@ -58,7 +58,7 @@ const caseStudies = [
     industry: "Healthcare",
     type: "Web Development",
     summary: "Designed and developed a responsive health platform with booking, donations, and CMS capabilities.",
-    image: "/images/case-studies/st-john-health-website-mockup.png",
+    image: "/images/case-studies/st-john-health-website-mockup.PNG",
     badge: "Web Dev",
   },
   {
@@ -68,7 +68,7 @@ const caseStudies = [
     type: "Web Development",
     summary:
       "Responsive B2B SaaS website for global users with complex integrations & CMS for inventory management solutions.",
-    image: "/images/case-studies/cin7-saas-platform-dashboard.png",
+    image: "/images/case-studies/cin7-saas-platform-dashboard.PNG",
     badge: "Web Dev",
   },
 ]

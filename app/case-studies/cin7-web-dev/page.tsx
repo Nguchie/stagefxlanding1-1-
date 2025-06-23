@@ -107,7 +107,7 @@ export default function Cin7WebDevCaseStudy() {
                 </p>
                 <div className="mb-8">
                   <Image
-                    src="/images/case-studies/cin7-web-dev/ci7landing.png"
+                    src="/images/case-studies/cin7-web-dev/ci7landing.PNG"
                     alt="ci7 landing page"
                     width={700}
                     height={400}

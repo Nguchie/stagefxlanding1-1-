@@ -152,7 +152,7 @@ export function Footer() {
               <p>Boston, MA 02111</p>
               <p>United States</p>
               <p className="mt-4">Phone: +1 857 392 5255</p>
-              <p>Email: samuel@stagefx.us</p>
+            
             </div>
           </div>
 
