@@ -345,7 +345,7 @@ export default function Home() {
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
-          poster="/images/video/research.png"
+          poster="/images/video/research.jpeg"
           playsInline
           controlsList="nodownload noremoteplayback noplaybackrate" // Disable download options
           disablePictureInPicture // Disable PiP

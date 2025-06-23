@@ -41,34 +41,22 @@ export default function ContactPage() {
     setStatusMessage("Sending...")
 
     try {
-      // Prepare data for email
-      const emailData = {
-        to: "Stagewebsolutions@gmail.com",
-        subject: `New Contact Form Submission from ${formData.fullName}`,
-        text: `
-Name: ${formData.fullName}
-Email: ${formData.email}
-Phone: ${formData.countryCode} ${formData.phoneNumber || "Not provided"}
-Company: ${formData.companyName || "Not specified"}
-State: ${formData.state || "Not specified"}
-Service: ${formData.serviceType || "Not specified"}
-Budget: ${formData.budget || "Not specified"}
-Timeline: ${formData.timeline || "Not specified"}
-
-Project Description:
-${formData.projectDescription}
-        `.trim(),
+      // Prepare data for submission - combine country code and phone number
+      const submissionData = {
+        ...formData,
+        phoneNumber: formData.phoneNumber 
+          ? `+${formData.countryCode.replace(/\D/g, '')}${formData.phoneNumber.replace(/\D/g, '')}`
+          : "",
       }
 
       // Send to Django backend API endpoint
-      // In your ContactPage component
-const response = await fetch("https://web-production-91a45.up.railway.app/api/send-email/", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(formData),
-})
+      const response = await fetch("https://web-production-91a45.up.railway.app/api/send-email/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submissionData),
+      })
 
       if (response.ok) {
         setStatus("success")
@@ -250,51 +238,47 @@ const response = await fetch("https://web-production-91a45.up.railway.app/api/se
                       />
                     </div>
 
-                  <div>
-  <Label htmlFor="phoneNumber" className="text-sm font-medium text-gray-700 mb-2 block">
-    Phone Number
-  </Label>
-
-  <div className="flex gap-2">
-    <Input
-      id="countryCode"
-      type="text"
-      value={formData.countryCode}
-      onChange={(e) => {
-        const value = e.target.value;
-        // Allow empty or "+" followed by 1–4 digits
-        if (value === '' || /^\+\d{1,4}$/.test(value)) {
-          handleInputChange("countryCode", value);
-        }
-      }}
-      placeholder="+1"
-      className="w-20 border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]"
-      disabled={status === "sending"}
-    />
-
-    <Input
-      id="phoneNumber"
-      type="tel"
-      value={formData.phoneNumber}
-      onChange={(e) => {
-        const value = e.target.value.replace(/\D/g, ''); // Strip non-digits
-        if (value.length <= 15) {
-          handleInputChange("phoneNumber", value);
-        }
-      }}
-      placeholder="Enter phone number"
-      className="flex-1 border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]"
-      disabled={status === "sending"}
-    />
-  </div>
-
-  {/* Error: phone number too short */}
-  {formData.phoneNumber && formData.phoneNumber.length < 5 && (
-    <p className="text-sm text-red-500 mt-1">
-      Phone number too short (min 5 digits)
-    </p>
-  )}
-</div>
+                    {/* Phone Number */}
+                    <div>
+                      <Label htmlFor="phoneNumber" className="text-sm font-medium text-gray-700 mb-2 block">
+                        Phone Number
+                      </Label>
+                      <div className="flex gap-2 items-center">
+                        <div className="relative flex items-center">
+                          <span className="absolute left-3 text-gray-700">+</span>
+                          <Input
+                            id="countryCode"
+                            type="text"
+                            value={formData.countryCode.replace('+', '')} // Remove + for display
+                            onChange={(e) => {
+                              // Only allow digits, max 4 characters
+                              const value = e.target.value.replace(/\D/g, '').slice(0, 4);
+                              handleInputChange("countryCode", value);
+                            }}
+                            className="w-20 pl-6 border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]"
+                            placeholder="1"
+                            disabled={status === "sending"}
+                          />
+                        </div>
+                        <Input
+                          id="phoneNumber"
+                          type="tel"
+                          value={formData.phoneNumber}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/\D/g, '');
+                            if (value === '' || value.length <= 15) {
+                              handleInputChange("phoneNumber", value);
+                            }
+                          }}
+                          className="flex-1 border-gray-200 focus:border-[#9baed9] focus:ring-[#9baed9]"
+                          placeholder="Enter phone number"
+                          disabled={status === "sending"}
+                        />
+                      </div>
+                      {formData.phoneNumber && formData.phoneNumber.length < 5 && (
+                        <p className="text-sm text-red-500 mt-1">Phone number too short (min 5 digits)</p>
+                      )}
+                    </div>
 
                     {/* Company Name */}
                     <div>
