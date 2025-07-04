@@ -107,7 +107,7 @@ export default function SEOServicesPage() {
                 asChild
               >
                 <Link href="/contact">
-                  Get a Free SEO Audit
+                  Get an SEO Audit
                 </Link>
               </Button>
               </div>
@@ -353,7 +353,7 @@ export default function SEOServicesPage() {
                 asChild
               >
                              <a href="tel:+18573925255">
-                  Request a Free SEO Consultation
+                  Get an SEO Consultation
                 </a>
               </Button>
             </div>

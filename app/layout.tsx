@@ -10,7 +10,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "StageFX - SEO & Web Development Agency",
   description: "We build websites that rank. SEO strategy and custom web development to grow your business.",
-  generator: "v0.dev",
+  icons: {
+    icon: "/images/stagelogo.png", // This points to your favicon.png in the public folder
+  },
 }
 
 export default function RootLayout({

@@ -442,7 +442,7 @@ export default function ContactPage() {
                 className="bg-white text-[#9baed9] hover:bg-gray-100 text-lg px-8 shadow-lg hover:shadow-xl transition-all"
               >
                 <a href="tel:+18573925255">
-                  Request a Free Consultation
+                  Request a Consultation
                 </a>
               </Button>
             </div>

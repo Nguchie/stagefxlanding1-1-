@@ -88,7 +88,7 @@ export default function Home() {
                 asChild
               >
                 <Link href="/contact">
-                  Get a Free SEO Audit
+                  Get a Website Audit
                 </Link>
               </Button>
             </div>
@@ -390,12 +390,7 @@ export default function Home() {
                 <Play className="h-5 w-5" />
               )}
             </button>
-            <div className="flex-1 h-1.5 bg-white/30 rounded-full overflow-hidden">
-              <div className="h-full bg-[#9baed9]" style={{ width: '75%' }}></div>
-            </div>
-            <div className="text-white text-xs font-mono">
-              1:23 / 2:45
-            </div>
+            
             <button
               onClick={() => videoRef.current?.requestFullscreen()}
               className="text-white hover:text-[#9baed9] p-1.5"
@@ -439,7 +434,7 @@ export default function Home() {
                 asChild
               >
                 <a href="tel:+18573925255">
-                  Request a Free Consultation
+                  Request a Consultation
                 </a>
               </Button>
             </div>
