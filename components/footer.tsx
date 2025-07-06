@@ -61,7 +61,7 @@ export function Footer() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    if (!selectedDate || !selectedTime || !name || !email) {
+    if (!selectedDate || !selectedTime || !name || !email || !countryCode || !phoneNumber) {
       alert("Please fill all required fields and select a date and time")
       return
     }
@@ -420,7 +420,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label htmlFor="countryCode" className="block text-sm font-medium text-gray-700 mb-2">
-              Country Code
+              Country Code*
             </label>
             <div className="relative flex items-center">
               <span className="absolute left-3 text-gray-500">+</span>
@@ -441,7 +441,7 @@ export function Footer() {
 
           <div>
             <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-2">
-              Phone Number
+              Phone Number*
             </label>
             <input
               type="tel"
@@ -460,7 +460,7 @@ export function Footer() {
         </div>
                 <Button
                   type="submit"
-                  disabled={!selectedDate || !selectedTime || !name || !email || isSubmitting}
+                  disabled={!selectedDate || !selectedTime || !name || !email || !countryCode || !phoneNumber || isSubmitting}
                   className="w-full bg-[#9baed9] hover:bg-[#8a9dc8] text-white py-4 px-6 rounded-md text-lg font-medium transition-colors shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
